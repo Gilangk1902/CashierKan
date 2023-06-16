@@ -1,0 +1,36 @@
+CREATE TABLE [dbo].[Role]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL, 
+    [Name] VARCHAR(50) NOT NULL,
+	PRIMARY KEY CLUSTERED ([Id] ASC)
+)
+
+CREATE TABLE [dbo].[User]
+(
+    [Id] INT IDENTITY(1,1) NOT NULL, 
+    [Name] VARCHAR(50) NOT NULL, 
+    [Email] VARCHAR(50) NOT NULL, 
+    [Password] VARCHAR(50) NOT NULL, 
+    [Address] VARCHAR(50) NOT NULL, 
+    [Dob] VARCHAR(50) NOT NULL,
+    [RoleId] INT NOT NULL, 
+    PRIMARY KEY CLUSTERED ([Id] ASC), 
+    CONSTRAINT [FK_User_Role] FOREIGN KEY ([RoleId]) REFERENCES [Role]([Id])
+)
+
+CREATE TABLE [dbo].[ItemType]
+(
+	[Id] INT IDENTITY NOT NULL, 
+    [Name] VARCHAR(50) NOT NULL, 
+	PRIMARY KEY ([Id] ASC)
+)
+
+CREATE TABLE [dbo].[Items]
+(
+	[Id] INT IDENTITY NOT NULL, 
+    [Name] VARCHAR(50) NOT NULL, 
+    [Type] INT NOT NULL, 
+    [Price] INT NOT NULL,
+	PRIMARY KEY ([Id] ASC), 
+    CONSTRAINT [FK_Items_ItemType] FOREIGN KEY ([Type]) REFERENCES [ItemType]([Id])
+)
