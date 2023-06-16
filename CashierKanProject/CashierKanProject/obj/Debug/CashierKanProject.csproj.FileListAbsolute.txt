@@ -1,0 +1,12 @@
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\CashierKanProject.dll.config
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\CashierKanProject.dll
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\CashierKanProject.pdb
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\EntityFramework.dll
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\EntityFramework.SqlServer.dll
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\EntityFramework.xml
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\bin\EntityFramework.SqlServer.xml
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\obj\Debug\CashierKanProject.csproj.AssemblyReference.cache
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\obj\Debug\CashierKanProject.csproj.CoreCompileInputs.cache
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\obj\Debug\CashierKanProject.csproj.CopyComplete
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\obj\Debug\CashierKanProject.dll
+C:\Users\bunga\OneDrive\Documents\Kuliah\Semester 4\Pattern Software Design\LAB\CashierKan Project\CashierKanProject\CashierKanProject\obj\Debug\CashierKanProject.pdb
