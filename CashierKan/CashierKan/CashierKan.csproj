@@ -158,12 +158,26 @@
     <Compile Include="Repository\CashierKanDatabase.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
+    <Compile Include="Views\ItemsView\Browse.aspx.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ItemsView\Browse.aspx.designer.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home\masterPage.Master.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Home\masterPage.Master.designer.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +238,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\ItemsView\Browse.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -239,6 +254,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\masterPage.Master" />
+    <Content Include="Views\Template.Master" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

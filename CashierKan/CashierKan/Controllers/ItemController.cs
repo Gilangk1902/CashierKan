@@ -1,5 +1,6 @@
 ﻿using CashierKan.Factory;
 using CashierKan.Handler;
+using CashierKan.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,42 @@ namespace CashierKan.Controllers
             }
         }
 
-        //TODO : More Method
+        public static Item Get(string id)
+        {
+            return itemHandler.Get(id);
+        }
+
+        public static List<Item> GetAll()
+        {
+            return itemHandler.GetAll();
+        }
+
+        public static List<Item> SearchItems(string searchQuery)
+        {
+            List<Item> allItem = GetAll();
+            List<Item> searchResult = new List<Item>();
+            foreach(Item item in allItem)
+            {
+                if (item.name.Contains(searchQuery))
+                {
+                    searchResult.Add(item);
+                }
+            }
+            return searchResult;
+        }
+
+        public static string GetId(string name) {
+            List<Item> allItems = GetAll();
+            string id = "";
+            foreach (Item item in allItems)
+            {
+                if (item.name.Equals(name))
+                {
+                    id = item.itemId;
+                }
+            }
+            return id;
+        }
 
         private static bool Validate(string name, string type, string price)
         {
