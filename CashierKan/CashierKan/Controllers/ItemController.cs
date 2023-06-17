@@ -14,12 +14,12 @@ namespace CashierKan.Controllers
 
         public static void AddItem(string name, string type, string price)
         {
-            if(Validate(name, type, price))
-            {
-                itemHandler.Add(ItemFactory.Create(name, type, price));
-            }
+            itemHandler.Add(ItemFactory.Create(name, type, price));
         }
-
+        public static void Update(string targetId, string name, string type, string price)
+        {
+            itemHandler.Update(targetId, ItemFactory.Create(name, type, price));
+        }
         public static Item Get(string id)
         {
             return itemHandler.Get(id);
@@ -57,10 +57,16 @@ namespace CashierKan.Controllers
             return id;
         }
 
-        private static bool Validate(string name, string type, string price)
+        public static bool Validate(string name, string type, string price)
         {
-            if(name.Length==0 || type.Length==0 || price.Length==0) return false;
-            else if(ContainsLetter(price)) return false;
+            if(name.Length<=0 || type.Length<=0 || price.Length <= 0)
+            {
+                return false;
+            }
+            else if (ContainsLetter(price))
+            {
+                return false;
+            }
             return true;
         }
         private static bool ContainsLetter(string price)

@@ -37,6 +37,11 @@
                     </asp:Panel>
                         <li class="nav-item">
                             <a class="nav-link">
+                                <asp:Button ID="AddItemBtn" runat="server" Text="AddItem" class="btn btn-success" OnClick="AddItemBtn_Click"/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
                                 <asp:Button ID="RegisterBtn" runat="server" Text="Register" class="btn btn-success" OnClick="RegisterBtn_Click"/>
                             </a>
                         </li>

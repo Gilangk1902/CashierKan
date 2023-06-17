@@ -53,5 +53,10 @@ namespace CashierKan.Views
         {
             Response.Redirect("~/Views/Login.aspx");
         }
+
+        protected void AddItemBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/AddItem");
+        }
     }
 }

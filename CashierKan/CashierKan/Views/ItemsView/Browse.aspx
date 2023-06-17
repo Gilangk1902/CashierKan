@@ -19,11 +19,12 @@
 </style>
 
     <!-- Item List -->
-    <asp:GridView ID="ItemGridView" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="ItemGridView_SelectedIndexChanged">
+    <asp:GridView ID="ItemGridView" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="ItemGridView_SelectedIndexChanged"
+        OnRowEditing="ItemGridView_RowEditing1">
         <Columns>
             <asp:BoundField DataField="name" HeaderText="Item Name" />
             <asp:BoundField DataField="price" HeaderText="Price" />
-            <asp:CommandField ShowSelectButton="true" />
+            <asp:CommandField ShowSelectButton="true" ShowEditButton="true"/>
         </Columns>
     </asp:GridView>
 
@@ -31,6 +32,7 @@
     <div>
         <h2>Item Detail</h2>
         <p><strong>Item Name:</strong> <asp:Label ID="ItemNameLabel" runat="server"></asp:Label></p>
+        <p><strong>Type</strong> <asp:Label ID="ItemTypeLabel" runat="server"></asp:Label></p>
         <p><strong>Price:</strong> <asp:Label ID="PriceLabel" runat="server"></asp:Label></p>
         <!-- Add other details as needed -->
     </div>

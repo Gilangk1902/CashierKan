@@ -12,6 +12,8 @@ namespace CashierKan
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.MapPageRoute("Browse", "Browse", "~/Views/ItemsView/Browse.aspx");
+            routes.MapPageRoute("AddItem", "AddItem", "~/Views/ItemsView/AddItem.aspx");
+            routes.MapPageRoute("UpdateItem", "UpdateItem", "~/Views/ItemsView/UpdateItem.aspx");
         }
     }
 }

@@ -53,18 +53,16 @@ namespace CashierKan.Views
 
             ItemNameLabel.Text = selectedItem.name;
             PriceLabel.Text = selectedItem.price.ToString();
+            ItemTypeLabel.Text = selectedItem.type.ToString();
         }
 
-        private void Unused_SelectedIndexChanged()
+        protected void ItemGridView_RowEditing1(object sender, GridViewEditEventArgs e)
         {
-            int selectedIndex = ItemGridView.SelectedIndex;
-            int itemId = Convert.ToInt32(ItemGridView.DataKeys[selectedIndex].Value);
+            GridViewRow editRow = ItemGridView.Rows[e.NewEditIndex];
+            string name = editRow.Cells[0].Text;
+            string itemId = ItemController.GetId(name);
 
-            string itemIdString = itemId.ToString();
-            Item selectedItem = ItemController.Get(itemIdString);
-
-            ItemNameLabel.Text = selectedItem.name;
-            PriceLabel.Text = selectedItem.price.ToString();
+            Response.Redirect("/UpdateItem?id=" + itemId);
         }
     }
 
