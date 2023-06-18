@@ -7,10 +7,10 @@ namespace CashierKan.Handler
 {
     public interface IHandler<T>
     {
-        T Get(string id);
+        T Get(int id);
         List<T> GetAll();
         void Add(T obj);
-        void Delete(string id);
-        void Update(string targetId, T obj);
+        void Delete(int id);
+        void Update(int targetId, T obj);
     }
 }

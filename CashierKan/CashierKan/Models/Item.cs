@@ -14,9 +14,11 @@ namespace CashierKan.Models
     
     public partial class Item
     {
-        public string itemId { get; set; }
-        public string name { get; set; }
-        public string type { get; set; }
-        public string price { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Type { get; set; }
+        public int Price { get; set; }
+    
+        public virtual ItemType ItemType { get; set; }
     }
 }

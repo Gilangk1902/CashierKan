@@ -48,19 +48,19 @@ namespace CashierKan.Views
 
             string name = selectedRow.Cells[0].Text;
 
-            string itemId = ItemController.GetId(name);
+            int itemId = ItemController.GetId(name);
             Item selectedItem = ItemController.Get(itemId);
 
-            ItemNameLabel.Text = selectedItem.name;
-            PriceLabel.Text = selectedItem.price.ToString();
-            ItemTypeLabel.Text = selectedItem.type.ToString();
+            ItemNameLabel.Text = selectedItem.Name;
+            PriceLabel.Text = selectedItem.Price.ToString();
+            ItemTypeLabel.Text = selectedItem.Type.ToString();
         }
 
         protected void ItemGridView_RowEditing1(object sender, GridViewEditEventArgs e)
         {
             GridViewRow editRow = ItemGridView.Rows[e.NewEditIndex];
             string name = editRow.Cells[0].Text;
-            string itemId = ItemController.GetId(name);
+            int itemId = ItemController.GetId(name);
 
             Response.Redirect("/UpdateItem?id=" + itemId);
         }

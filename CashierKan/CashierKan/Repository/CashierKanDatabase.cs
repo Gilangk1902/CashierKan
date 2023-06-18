@@ -8,8 +8,8 @@ namespace CashierKan.Repository
 {
     public class CashierKanDatabase
     {
-        private static CashierkanDatabaseEntities db = new CashierkanDatabaseEntities();
+        private static CashierDatabaseEntities db = new CashierDatabaseEntities();
 
-        public static CashierkanDatabaseEntities GetInstance() { return db; }
+        public static CashierDatabaseEntities GetInstance() { return db; }
     }
 }

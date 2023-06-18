@@ -9,29 +9,16 @@ namespace CashierKan.Factory
 {
     public class ItemFactory
     {
-        public static Item Create(string name, string type, string price)
+        public static Item Create(string name, int type, int price)
         {
             Item newItem = new Item
             {
-                itemId = CreateId(),
-                name = name,
-                type = type,
-                price = price
+                Name = name,
+                Type = type,
+                Price = price
             };
 
             return newItem;
-        }
-
-        private static string CreateId()
-        {
-            Random random = new Random();
-
-            string itemIdCode = "IT";
-            
-            int randomNumber = random.Next(100, 1000);
-            string randomNumber_str = randomNumber.ToString();
-
-            return itemIdCode + randomNumber_str;
         }
     }
 }
