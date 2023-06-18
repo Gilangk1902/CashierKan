@@ -1,35 +1,37 @@
-﻿using System;
+﻿using CashierKan.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace CashierKan.Repository
 {
-    public class TypeRepository : IRepository<Type>
+    public class TypeRepository : IRepository<ItemType>
     {
-        public void Add(Type item)
+        public void Add(ItemType item)
         {
-            throw new NotImplementedException();
+            CashierKanDatabase.GetInstance().ItemTypes.Add(item);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            CashierKanDatabase.GetInstance().ItemTypes.Remove(Get(id));
         }
 
-        public Type Get(int id)
+        public ItemType Get(int id)
         {
-            throw new NotImplementedException();
+            return CashierKanDatabase.GetInstance().ItemTypes.Find(id);
         }
 
-        public List<Type> GetAll()
+        public List<ItemType> GetAll()
         {
-            throw new NotImplementedException();
+            return CashierKanDatabase.GetInstance().ItemTypes.ToList();
         }
 
-        public void Update(int id, Type item)
+        public void Update(int targetId, ItemType item)
         {
-            throw new NotImplementedException();
+            ItemType targetType = Get(targetId);
+            targetType.Name = item.Name;
         }
     }
 }
