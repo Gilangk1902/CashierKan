@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="CashierKan.Views.Template" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav>
+                <div>
+                    <p>CashierKan</p>
+                </div>
+                 <div>
+                    <ul>
+                <asp:Panel ID="ManagePanel" runat="server">
+                        <li>
+                            <div>
+                                <a>Manage Menu</a>
+                                <div class="dropdown-content row">
+                                    <div class="col md-4">
+                                        <asp:HyperLink ID="ViewItemsLink" runat="server" NavigateUrl="~/Views/ViewItems.aspx" CssClass="dropdown-box-a">View Items</asp:HyperLink>
+                                        <asp:HyperLink ID="ViewUsersLink" runat="server" NavigateUrl="~/Views/ViewUsers.aspx" CssClass="dropdown-box-a">View Users</asp:HyperLink>
+                                        <%--tambahin menu di sini--%>
+                                        <asp:HyperLink ID="LogoutLink" runat="server" CssClass="dropdown-box-a"><asp:Button CssClass="dropdown-box-a" ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click" /></asp:HyperLink>
+                                    </div>
+                                   <%-- <div class="col md-4">
+                                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Views/ShowReport.aspx" CssClass="dropdown-box-a">Show Report</asp:HyperLink>
+                                    </div>--%>
+                                </div>
+                            </div>
+                        </li>
+                    </asp:Panel>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <asp:Button ID="AddItemBtn" runat="server" Text="AddItem" class="btn btn-success" OnClick="AddItemBtn_Click"/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <asp:Button ID="RegisterBtn" runat="server" Text="Register" class="btn btn-success" OnClick="RegisterBtn_Click"/>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-outline-success" OnClick="LoginBtn_Click"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
