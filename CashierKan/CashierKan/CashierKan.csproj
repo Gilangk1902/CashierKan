@@ -131,14 +131,17 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\TypeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Factory\ItemFactory.cs" />
     <Compile Include="Factory\TypeFactory.cs" />
+    <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Handler\IHandler.cs" />
     <Compile Include="Handler\ItemHandler.cs" />
     <Compile Include="Handler\TypeHandler.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Models\Item.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -171,6 +174,7 @@
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
     <Compile Include="Repository\TypeRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Views\ItemsView\AddItem.aspx.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,12 +203,33 @@
     <Compile Include="Views\ItemsView\UpdateItem.aspx.designer.cs">
       <DependentUpon>UpdateItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginRegister\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginRegister\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginRegister\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginRegister\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Template.Master.cs">
       <DependentUpon>Template.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersView\ViewUsers.aspx.cs">
+      <DependentUpon>ViewUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UsersView\ViewUsers.aspx.designer.cs">
+      <DependentUpon>ViewUsers.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +293,9 @@
     <Content Include="Views\ItemsView\AddItem.aspx" />
     <Content Include="Views\ItemsView\Browse.aspx" />
     <Content Include="Views\ItemsView\UpdateItem.aspx" />
+    <Content Include="Views\LoginRegister\Login.aspx" />
+    <Content Include="Views\LoginRegister\Register.aspx" />
+    <Content Include="Views\UsersView\ViewUsers.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
