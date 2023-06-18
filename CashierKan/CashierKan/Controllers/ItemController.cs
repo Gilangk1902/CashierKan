@@ -12,15 +12,15 @@ namespace CashierKan.Controllers
     {
         private static ItemHandler itemHandler = new ItemHandler();
 
-        public static void AddItem(string name, string type, string price)
+        public static void AddItem(string name, int type, int price)
         {
             itemHandler.Add(ItemFactory.Create(name, type, price));
         }
-        public static void Update(string targetId, string name, string type, string price)
+        public static void Update(int targetId, string name, int type, int price)
         {
             itemHandler.Update(targetId, ItemFactory.Create(name, type, price));
         }
-        public static Item Get(string id)
+        public static Item Get(int id)
         {
             return itemHandler.Get(id);
         }
@@ -36,7 +36,7 @@ namespace CashierKan.Controllers
             List<Item> searchResult = new List<Item>();
             foreach(Item item in allItem)
             {
-                if (item.name.Contains(searchQuery))
+                if (item.Name.Contains(searchQuery))
                 {
                     searchResult.Add(item);
                 }
@@ -44,14 +44,14 @@ namespace CashierKan.Controllers
             return searchResult;
         }
 
-        public static string GetId(string name) {
+        public static int GetId(string name) {
             List<Item> allItems = GetAll();
-            string id = "";
+            int id = 0;
             foreach (Item item in allItems)
             {
-                if (item.name.Equals(name))
+                if (item.Name.Equals(name))
                 {
-                    id = item.itemId;
+                    id = item.Id;
                 }
             }
             return id;

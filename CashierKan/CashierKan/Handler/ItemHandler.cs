@@ -15,12 +15,12 @@ namespace CashierKan.Handler
             repository.Add(obj);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             repository.Delete(id);
         }
 
-        public Item Get(string id)
+        public Item Get(int id)
         {
             return repository.Get(id);
         }
@@ -30,7 +30,7 @@ namespace CashierKan.Handler
             return repository.GetAll();
         }
 
-        public void Update(string targetId, Item obj)
+        public void Update(int targetId, Item obj)
         {
             repository.Update(targetId, obj);
         }

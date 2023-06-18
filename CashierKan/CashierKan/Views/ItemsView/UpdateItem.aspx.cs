@@ -23,32 +23,34 @@ namespace CashierKan.Views.ItemsView
         {
             string price = price_TextBox.Text;
             string name = name_TextBox.Text;
-            string type = types_DropDownList.Text;
-            if(ItemController.Validate(name, type, price))
+            string type_name = types_DropDownList.Text;
+
+            if(ItemController.Validate(name, type_name, price))
             {
-                ItemController.Update(RequestID(), name, type, price);
+                int type = TypeController.GetId(type_name);
+                ItemController.Update(RequestID(), name, type, Convert.ToInt32(price));
                 Response.Redirect("/Browse");
             }
         }
 
-        private string RequestID()
+        private int RequestID()
         {
             if (Request.QueryString["id"] != null)
             {
-                return Request.QueryString["id"];
+                return int.Parse(Request.QueryString["id"]);
             }
             else
             {
-                return string.Empty;
+                return int.MinValue;
             }
         }
 
-        private void LoadData(string id)
+        private void LoadData(int id)
         {
             Item item = ItemController.Get(id);
-            name_TextBox.Text = item.name;
-            types_DropDownList.Text = item.type;
-            price_TextBox.Text = item.price;
+            name_TextBox.Text = item.Name;
+            types_DropDownList.Text = item.Type.ToString();
+            price_TextBox.Text = item.Price.ToString();
         }
     }
 }

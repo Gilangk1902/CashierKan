@@ -21,12 +21,10 @@ namespace CashierKan.Views.ItemsView
             string price = price_TextBox.Text;
             string type = types_DropDownList.Text;
 
-            if(!ItemController.Validate(name, price, type))
+
+            if(!ItemController.Validate(name, type, price))
             {
-                name_Label.Text = name;
-                price_Label.Text = price;
-                types_Label.Text = type;
-                ItemController.AddItem(name, type, price);
+                ItemController.AddItem(name, int.Parse(type), int.Parse(type));
                 Response.Redirect("~/Browse");
             }
             
