@@ -5,31 +5,38 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using CashierKan.Repository;
+
 namespace CashierKan.Views
 {
     public partial class Template : System.Web.UI.MasterPage
     {
-        //UserRepository userRepo = new UserRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Role"] != null)
+            RegisterContainer.Visible = false;
+            LoginContainer.Visible = false;
+            LogoutLink.Visible = false;
+            ManagePanel.Visible = false;
+            AddItemContainer.Visible = false;
+            ViewItemsLink.Visible = false;
+            ViewUsersLink.Visible = false;
+
+            var rawr = HttpContext.Current.Session;
+            if (rawr["Role"] == null)
             {
-                RegisterBtn.Visible = false;
-                LoginBtn.Visible = false;
-                LogoutBtn.Visible = true;
-                ManagePanel.Visible = true;
-                //if (!Roles.IsUserInRole("Admin"))
-                //{
-                //    ViewUsersLink.Visible = false;
-                //}
+                LoginContainer.Visible = true;
+                RegisterContainer.Visible = true;
+                return;
             }
-            else
-            {
-                RegisterBtn.Visible = true;
-                LoginBtn.Visible = true;
-                LogoutBtn.Visible = false;
-                ManagePanel.Visible = false;
-            }
+            LogoutBtn.Visible = true;
+
+            string getRole = (string) rawr["Role"];
+            //System.Diagnostics.Debug.WriteLine(getRole);
+
+            ManagePanel.Visible = getRole == "Admin" || getRole == "Cashier";
+            ViewUsersLink.Visible = getRole == "Admin";
+            //ViewItemsLink.Visible = ManagePanel.Visible;
+            AddItemContainer.Visible = ManagePanel.Visible;
         }
 
         protected void LogoutBtn_Click(object sender, EventArgs e)
@@ -41,22 +48,27 @@ namespace CashierKan.Views
                 Response.Cookies.Add(userCookie);
             }
             Session.Abandon();
-            Response.Redirect("~/Views/Login.aspx");
+            Response.Redirect("~/Login");
         }
 
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Register.aspx");
+            Response.Redirect("~/Register");
         }
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Login.aspx");
+            Response.Redirect("/Login");
         }
 
         protected void AddItemBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("/AddItem");
+        }
+
+        protected void BrowseItems_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Browse");
         }
     }
 }

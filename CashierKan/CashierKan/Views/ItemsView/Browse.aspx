@@ -7,7 +7,7 @@
     <!-- Search Form -->
     <asp:TextBox ID="SearchTextBox" runat="server"></asp:TextBox>
     <asp:Button ID="SearchButton" runat="server" Text="Search" OnClick="SearchButton_Click" />
-    <asp:Button ID="Button1" runat="server" Text="Search" CssClass="blue-button" OnClick="SearchButton_Click" />
+    <%--<asp:Button ID="Button1" runat="server" Text="Search" CssClass="blue-button" OnClick="SearchButton_Click" />--%>
     <style>
     .blue-button {
         background-color: blue;
@@ -24,7 +24,7 @@
         <Columns>
             <asp:BoundField DataField="name" HeaderText="Item Name" />
             <asp:BoundField DataField="price" HeaderText="Price" />
-            <asp:CommandField ShowSelectButton="true" ShowEditButton="true"/>
+            <asp:CommandField ShowSelectButton="true"/>
         </Columns>
     </asp:GridView>
 

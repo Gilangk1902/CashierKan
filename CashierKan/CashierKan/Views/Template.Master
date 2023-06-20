@@ -23,10 +23,12 @@
                                 <a>Manage Menu</a>
                                 <div class="dropdown-content row">
                                     <div class="col md-4">
-                                        <asp:HyperLink ID="ViewItemsLink" runat="server" NavigateUrl="~/Views/ViewItems.aspx" CssClass="dropdown-box-a">View Items</asp:HyperLink>
-                                        <asp:HyperLink ID="ViewUsersLink" runat="server" NavigateUrl="~/Views/ViewUsers.aspx" CssClass="dropdown-box-a">View Users</asp:HyperLink>
+                                        <asp:HyperLink ID="ViewItemsLink" runat="server" NavigateUrl="/ViewItems" CssClass="dropdown-box-a">View Items</asp:HyperLink>
+                                        <asp:HyperLink ID="ViewUsersLink" runat="server" NavigateUrl="/ViewUsers" CssClass="dropdown-box-a">View Users</asp:HyperLink>
                                         <%--tambahin menu di sini--%>
-                                        <asp:HyperLink ID="LogoutLink" runat="server" CssClass="dropdown-box-a"><asp:Button CssClass="dropdown-box-a" ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click" /></asp:HyperLink>
+                                        <asp:HyperLink ID="LogoutLink" runat="server" CssClass="dropdown-box-a">
+                                            <asp:Button CssClass="dropdown-box-a" ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click" />
+                                        </asp:HyperLink>
                                     </div>
                                    <%-- <div class="col md-4">
                                         <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Views/ShowReport.aspx" CssClass="dropdown-box-a">Show Report</asp:HyperLink>
@@ -35,17 +37,22 @@
                             </div>
                         </li>
                     </asp:Panel>
-                        <li class="nav-item">
+                        <li id="Li1" class="nav-item" runat="server">
+                            <a class="nav-link">
+                                <asp:Button ID="BrowseItems" runat="server" Text="Browse Items" class="btn btn-outline-success" OnClick="BrowseItems_Click"/>
+                            </a>
+                        </li>
+                        <li id="AddItemContainer" class="nav-item" runat="server">
                             <a class="nav-link">
                                 <asp:Button ID="AddItemBtn" runat="server" Text="AddItem" class="btn btn-success" OnClick="AddItemBtn_Click"/>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li id="RegisterContainer" class="nav-item" runat="server">
                             <a class="nav-link">
                                 <asp:Button ID="RegisterBtn" runat="server" Text="Register" class="btn btn-success" OnClick="RegisterBtn_Click"/>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li id="LoginContainer" class="nav-item" runat="server">
                             <a class="nav-link">
                                 <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-outline-success" OnClick="LoginBtn_Click"/>
                             </a>

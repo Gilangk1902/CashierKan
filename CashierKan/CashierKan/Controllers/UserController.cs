@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using CashierKan.Handler;
+using CashierKan.Repository;
 
 namespace CashierKan.Controllers
 {
@@ -66,7 +67,9 @@ namespace CashierKan.Controllers
             {
                 return "Credential is not valid";
             }
-            HttpContext.Current.Session["Role"] = "User";
+
+
+            HttpContext.Current.Session["Role"] = (string) UserRepository.getUserRoleName(user);
             HttpContext.Current.Session["User"] = user;
             HttpContext.Current.Session["Name"] = user.Name;
             HttpContext.Current.Session["ID"] = user.Id;
