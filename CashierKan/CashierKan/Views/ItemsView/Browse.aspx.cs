@@ -30,6 +30,9 @@ namespace CashierKan.Views
         {
             List<Item> items = ItemController.GetAll();
 
+            CommandField cmdField = (CommandField)ItemGridView.Columns[2];
+            cmdField.ShowEditButton = Session["Role"] != null && Session["Role"] != "Customer";
+
             ItemGridView.DataSource = items;
             ItemGridView.DataBind();
         }

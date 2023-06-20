@@ -173,6 +173,7 @@
     <Compile Include="Repository\CashierKanDatabase.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
+    <Compile Include="Repository\RoleRepository.cs" />
     <Compile Include="Repository\TypeRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Views\ItemsView\AddItem.aspx.cs">
@@ -188,13 +189,6 @@
     </Compile>
     <Compile Include="Views\ItemsView\Browse.aspx.designer.cs">
       <DependentUpon>Browse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Home\masterPage.Master.cs">
-      <DependentUpon>masterPage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Home\masterPage.Master.designer.cs">
-      <DependentUpon>masterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\ItemsView\UpdateItem.aspx.cs">
       <DependentUpon>UpdateItem.aspx</DependentUpon>
@@ -307,13 +301,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\masterPage.Master" />
     <Content Include="Views\Template.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\qdas\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

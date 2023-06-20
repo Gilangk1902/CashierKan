@@ -30,17 +30,31 @@ namespace CashierKan.Repository
             db.SaveChanges();
         }
 
-
         public static void deleteUser(int id)
         {
             db.Users.Remove(db.Users.Find(id));
             db.SaveChanges();
         }
 
-        public User getUsers(int id)
+        public static User getUsers(int id)
         {
             return db.Users.Where(x => x.Id == id).FirstOrDefault();
 
+        }
+
+        public static bool isUserAdmin(User user)
+        {
+            return RoleRepository.getRolePermissionLevel(user.RoleId) >= 3; // FIXED VALUE
+        }
+
+        public static bool isUserCashier(User user)
+        {
+            return RoleRepository.getRolePermissionLevel(user.RoleId) >= 2; // FIXED VALUE
+        }
+
+        public static string getUserRoleName(User user)
+        {
+            return RoleRepository.getRoleName(user.RoleId);
         }
     }
 }

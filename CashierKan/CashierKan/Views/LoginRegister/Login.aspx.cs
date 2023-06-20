@@ -16,7 +16,7 @@ namespace CashierKan.Views.LoginRegister
             {
                 if (Session["Role"] != null)
                 {
-                    Response.Redirect("../Home.aspx", false);
+                    Response.Redirect("/Browse", false);
                 }
                 else if (Request.Cookies["UserCookie"] != null)
                 {
@@ -35,7 +35,7 @@ namespace CashierKan.Views.LoginRegister
             string LoginUser = UserController.LoginUser(email, password, rememberCheck);
             if (LoginUser == null)
             {
-                Response.Redirect("~/Views/Home.aspx");
+                Response.Redirect("/Login");
             }
             else
             {

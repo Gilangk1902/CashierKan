@@ -53,7 +53,7 @@ namespace CashierKan.Views.LoginRegister
             }
             else
             {
-                Response.Redirect("~/Views/Login.aspx");
+                Response.Redirect("/Login");
             }
         }
 

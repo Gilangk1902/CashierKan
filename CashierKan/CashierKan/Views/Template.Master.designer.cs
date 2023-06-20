@@ -78,6 +78,33 @@ namespace CashierKan.Views
         protected global::System.Web.UI.WebControls.Button LogoutBtn;
 
         /// <summary>
+        /// Li1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li1;
+
+        /// <summary>
+        /// BrowseItems control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BrowseItems;
+
+        /// <summary>
+        /// AddItemContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddItemContainer;
+
+        /// <summary>
         /// AddItemBtn control.
         /// </summary>
         /// <remarks>
@@ -87,6 +114,15 @@ namespace CashierKan.Views
         protected global::System.Web.UI.WebControls.Button AddItemBtn;
 
         /// <summary>
+        /// RegisterContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl RegisterContainer;
+
+        /// <summary>
         /// RegisterBtn control.
         /// </summary>
         /// <remarks>
@@ -94,6 +130,15 @@ namespace CashierKan.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button RegisterBtn;
+
+        /// <summary>
+        /// LoginContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginContainer;
 
         /// <summary>
         /// LoginBtn control.
